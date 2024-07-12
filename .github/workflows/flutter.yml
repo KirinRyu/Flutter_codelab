@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-windows
-          path: build/windows/runner/Releas
+          path: build/windows/runner/Release
