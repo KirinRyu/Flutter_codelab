@@ -15,13 +15,18 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: '3.22.2'
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Enable Windows desktop
         run: flutter config --enable-windows-desktop
+
+      - name: Debug Environment
+        run: |
+         flutter doctor -v
+         flutter devices
 
       - name: Build
         run: flutter build windows
